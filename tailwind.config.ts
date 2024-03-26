@@ -14,6 +14,18 @@ const config: Config = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
     },
+
+    colors: {
+
+      'olive': '#cfe2cd',
+      'oliveShade': '#acbea9',
+      'oliveText': '#536150',
+      'oliveTextHover': '#444e42',
+      'graywhite': '#e2eddf',
+      'inputShade': '#c0cfbc',
+
+
+    },
   },
   plugins: [],
 };
