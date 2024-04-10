@@ -17,9 +17,9 @@ export async function saveData(projectName: string) {
   }
 }
 
-export async function saveTime(projectName: string, totalSeconds: number) {
+export async function saveTime(projectId: string, totalSecond: any) {
   try {
-    await db.query("INSERT INTO projects(projectname, total_seconds) VALUES ($1, $2)", [projectName, totalSeconds]); // Assuming you have a column total_seconds in your projects table
+    await db.query("INSERT INTO projects(projectname, timespent) VALUES ($1, $2)", [projectId, totalSecond]);
     return 'Saved Successfully';
   } catch (error) {
     console.log(error);
@@ -30,6 +30,4 @@ export async function saveTime(projectName: string, totalSeconds: number) {
 export async function onSubmit(formData: FormData) {
   const totalSeconds = formData.get('totalSeconds')
   const projectId = formData.get('projectId')
-  console.log(totalSeconds, projectId)
-
 }
